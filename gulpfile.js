@@ -8,9 +8,9 @@ var rename = require('gulp-rename');
 // 编译Sass
 gulp.task('sass', function() {
     gulp.src('./app/css/scss/*.scss')
-        .pipe(sass({'outputStyle':'compressed'}))
+        .pipe(sass({outputStyle:'compressed'}))
         .pipe(rename('index.css'))
-        .pipe(gulp.dest('./app/css/'));
+        .pipe(gulp.dest('./app/dist/'));
 });
 
 
