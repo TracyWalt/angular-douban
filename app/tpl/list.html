@@ -1,0 +1,13 @@
+<ul>
+    <li ng-repeat="item in list">
+        <div class="cover">
+              <a href="#/app/{{item.id}}">
+                <img ng-src="{{item.image}}" width="106px" height="158px" />
+              </a>
+        </div>
+        <div class="info">
+              <div class="title"><a href="#/app/{{item.id}}">{{item.title}}</a></div>
+              <!-- <div class="author">[英]克莱尔•加柏</div> -->
+        </div>
+    </li>
+</ul>

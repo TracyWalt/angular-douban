@@ -1,0 +1,25 @@
+<div class="article-box">
+    <h1 class="article-title">{{book.title}}</h1>
+    <div class="article-msg">
+        <div class="article-img"><img ng-src="{{book.image}}"></div>
+        <div class="article-txt">
+            <p>出版社:{{book.publisher}}</p>
+            <p>副标题:{{book.subtitle}}</p>
+            <p>原作名:{{book.origin_title}}</p>
+            <p>译者:{{book.translator[0]}}</p>
+            <p>出版年:{{book.pubdate}}</p>
+            <p>页数:{{book.pages}}</p>
+            <p>定价:{{book.price}}</p>
+            <p>装帧:{{book.binding}}</p>
+            <p>ISBN:{{book.isbn13}}</p>
+        </div>
+    </div>
+    <h2 class="article-title-sub">内容简介&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·</h2>
+    <div class="article-intro">
+        {{book.summary}}
+    </div>
+    <h2 class="article-title-sub">作者简介&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·</h2>
+    <div class="article-intro">
+        {{book.author_intro}}
+    </div>
+</div>
