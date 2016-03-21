@@ -7,10 +7,10 @@ var rename = require('gulp-rename');
 
 // 编译Sass
 gulp.task('sass', function() {
-    gulp.src('./app/css/scss/*.scss')
+    gulp.src('./app/scss/*.scss')
         .pipe(sass({outputStyle:'compressed'}))
         .pipe(rename('index.css'))
-        .pipe(gulp.dest('./app/dist/'));
+        .pipe(gulp.dest('./app/css/'));
 });
 
 
