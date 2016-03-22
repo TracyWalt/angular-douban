@@ -15,7 +15,7 @@ gulp.task('sass', function() {
 
 
 // 默认任务
-gulp.task('default', function(){
+gulp.task('default',function(){
     // 监听任务 运行语句 gulp watch
-    gulp.watch('./app/css/scss/*.scss', ['sass']);
+    gulp.watch('./app/scss/*.scss', ['sass']);
 });
