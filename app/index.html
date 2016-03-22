@@ -3,14 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>angular-douban</title>
-        <link rel="stylesheet" href="plugin/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="css/index.css">
-        <script src="plugin/jquery/dist/jquery.min.js"></script>
-        <script src="plugin/angular/angular.js"></script>
-        <script src="plugin/angular-route/angular-route.js"></script>
-        <script src="plugin/angular-resource/angular-resource.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/controllers.js"></script>
     </head>
     <body>
 
@@ -18,7 +11,7 @@
         <header class="nav">
             <div class="nav-link" ng-controller="navCtrl">
                 <ul>
-                    <li ng-repeat="nav in navs">{{nav}}</li>
+                    <li ng-repeat="nav in navs"><span ng-bind="nav"></span></li>
                 </ul>
             </div>
             <div class="nav-btn">
@@ -60,8 +53,8 @@
             <aside class="content-aside" ng-controller="tagCtrl">
                 <h2 class="tag">热门标签</h2>
                 <dl class="item" ng-repeat="tag in tags">
-                    <dt>{{tag.title}}</dt>
-                    <dd ng-repeat="subtag in tag.subtags">{{subtag}}</dd>
+                    <dt ng-bind="tag.title"></dt>
+                    <dd ng-repeat="subtag in tag.subtags"><span ng-bind="subtag"></span></dd>
                 </dl>
             </aside>
         </article>
@@ -70,5 +63,13 @@
         <footer class="footer">
                 © 2005－2016 douban.com, all rights reserved 模仿豆瓣仅供学习参考
         </footer>
+
+        <script src="plugin/jquery/dist/jquery.min.js"></script>
+        <script src="plugin/angular/angular.js"></script>
+        <script src="plugin/angular-route/angular-route.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/service.js"></script>
+
     </body>
 </html>
