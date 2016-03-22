@@ -78,9 +78,9 @@ a{text-decoration:none;}
     .content-main{
         width:590px; float:left;
         ul{
-            margin-right:-15px;
+            position:relative;
             li{
-                float:left; margin:0 15px 15px 0; width:106px;
+                float:left; margin:0 15px 15px 0; width:106px; transition:.8s; left:0; top:0; opacity:0;
             }
             li:hover img{transform:scale(1.5,1.5);}
             .cover{width:106px; height:158px; overflow:hidden;}

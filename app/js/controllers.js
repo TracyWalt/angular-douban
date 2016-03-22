@@ -16,12 +16,26 @@ angularDoubanControllers.controller('tagCtrl',['$scope','Base',function($scope,B
 }]);
 
 //list
-angularDoubanControllers.controller('listCtrl', ['$scope','Base',
-  function($scope,Base) {
+angularDoubanControllers.controller('listCtrl', ['$scope','Base','$timeout',
+  function($scope,Base,$timeout) {
     Base.getList(function(data){
         $scope.list = data.books;
-        $scope.$apply();
+        $scope.$apply();  //手动更新视图
+
+        //添加动画
+        $timeout(function(){
+            $('#list li').each(function(index){
+                $(this).css({
+                    'opacity':1,
+                    'position':'absolute',
+                    'left':108*(index%5)+15*(index%5)+'px',
+                    'top':177*(Math.floor(index/5))+Math.floor(index/5)*15+'px'
+                });
+            }).parent().css('height',Math.ceil($('#list li').length/5)*192);
+        },0);
+
     });
+
   }]);
 
 
