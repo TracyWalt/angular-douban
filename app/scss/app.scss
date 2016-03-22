@@ -76,11 +76,11 @@ a{text-decoration:none;}
 .content{
     width:950px; margin:20px auto; overflow:hidden;
     .content-main{
-        width:590px; float:left;
+        width:605px; float:left;
         ul{
-            position:relative;
+            position:relative; opacity:0;
             li{
-                float:left; margin:0 15px 15px 0; width:106px; transition:.8s; left:0; top:0; opacity:0;
+                float:left; margin:0 15px 15px 0; width:106px; transition:.8s; left:0; top:0;
             }
             li:hover img{transform:scale(1.5,1.5);}
             .cover{width:106px; height:158px; overflow:hidden;}
