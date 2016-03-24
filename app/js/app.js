@@ -1,7 +1,8 @@
 var angularDouban = angular.module('angularDouban', [
   'ngRoute',
   'angularDoubanControllers',
-  'angularDoubanService'
+  'angularDoubanService',
+  'angularDoubanDirective'
 ]);
 
 angularDouban.config(['$routeProvider',
